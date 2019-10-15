@@ -1,0 +1,14 @@
+song.hpp: generator
+	./generator
+
+generator: generate.o generate_song.o rtttl_player.o
+	g++ -std=c++17 generate.o generate_song.o rtttl_player.o -o generator
+
+generate.o: generate.cpp rtttl_player.hpp generate_song.hpp
+	g++ -std=c++17 -c generate.cpp -o generate.o
+
+generate_song.o: generate_song.hpp generate_song.cpp
+	g++ -std=c++17 -c generate_song.cpp -o generate_song.o
+
+rtttl_player.o: rtttl_player.hpp rtttl_player.cpp
+	g++ -std=c++17 -c rtttl_player.cpp -o rtttl_player.o
