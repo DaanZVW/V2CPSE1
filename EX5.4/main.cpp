@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN 
-#include "catch.hpp"
+#include "/home/daanzvw/Catch2/single_include/catch2/catch.hpp"
 #include "set.hpp"
 
 TEST_CASE( "MAX FUNCTION WITH CHARS" ){
@@ -19,3 +19,4 @@ TEST_CASE( "MAX FUNCTION WITH CHARS2" ){
     s.add('Z');
     REQUIRE( s.max() == 'Z' ); 
 }
+
