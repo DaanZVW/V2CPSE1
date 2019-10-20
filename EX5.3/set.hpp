@@ -16,7 +16,12 @@ public:
     set(){}
 
     void add( T number ) {
-        if (pointer < N) {
+        if (pointer < maxInts) {
+            for (int i = 0; i < pointer; i++) {
+                if (intset[i] == number) {
+                    return;
+                }
+            }
             intset[pointer] = number;
             pointer++;
         }

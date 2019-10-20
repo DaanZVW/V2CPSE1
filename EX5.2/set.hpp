@@ -17,6 +17,11 @@ public:
 
     void add( T number ) {
         if (pointer < N) {
+            for (int i = 0; i < pointer; i++) {
+                if (intset[i] == number) {
+                    return;
+                }
+            }
             intset[pointer] = number;
             pointer++;
         }
